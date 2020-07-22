@@ -19,9 +19,9 @@ This API should be integrated in your shopping cart and there are two simple ste
 
   `GET` - retrieves a new Tag code
 
-- **URL Params**
+- **Query Params**
 
-  **quantity:** _number of tags to request, this parameter is a number between one and ten, it's optional_
+  **quantity:** _(optional)_ number of tags to request, this parameter is a number between one and ten, it's optional
 
 - **Request Headers**
 
@@ -59,7 +59,7 @@ This API should be integrated in your shopping cart and there are two simple ste
 
   `GET` - retrieves a PNG image of the corresponding QR Tag
 
-- **URL Params**
+- **Path Params**
 
   **[TAG-CODE]:** _The Tag code you want to retrieve the QR Tag image from_
 
