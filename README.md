@@ -21,7 +21,7 @@ This API should be integrated in your shopping cart and there are two simple ste
 
 - **Query Params**
 
-  **quantity:** _(optional)_ number of tags to request, this parameter is a number between one and ten, it's optional
+  <_There are no Query Params needed for this API endpoint_>
 
 - **Request Headers**
 
