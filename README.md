@@ -84,7 +84,7 @@ This API should be integrated in your shopping cart and there are two simple ste
 
   _`curl -X GET \`_  
   _`https://api.storydots.app/qr/[QR-CODE] \`_  
-  _`-H 'cache-control: no-cache' \`_
+  _`-H 'cache-control: no-cache' `_
 
 - **Notes:**
 
