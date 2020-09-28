@@ -44,10 +44,10 @@ This API should be integrated in your shopping cart and there are two simple ste
 
 - **Sample Call:**
 
-  `_curl -X GET \_`  
-  `_https://api.storydots.app/tag \_`  
-  `_-H 'cache-control: no-cache' \_`  
-  `_-H 'x-api-key: [YOUR-API-KEY]'_`
+  _`curl -X GET \`_  
+  _`https://api.storydots.app/tag \`_  
+  _`-H 'cache-control: no-cache' \`_  
+  _`-H 'x-api-key: [YOUR-API-KEY]'`_
 
 ## **Retrieving QR Tag image**
 
@@ -78,13 +78,13 @@ This API should be integrated in your shopping cart and there are two simple ste
 - **Error Response:**
 
   - **Code:** 404 NOT FOUND <br />
-    **Content:** `{ "message": 'Not Found' }`
+    **Content:** `{}`
 
 - **Sample Call:**
 
-  `_curl -X GET \_`  
-  `_https://api.storydots.app/qr/[QR-CODE] \_`  
-  `_-H 'cache-control: no-cache' \_`
+  _`curl -X GET \`_  
+  _`https://api.storydots.app/qr/[QR-CODE] \`_  
+  _`-H 'cache-control: no-cache' \`_
 
 - **Notes:**
 
