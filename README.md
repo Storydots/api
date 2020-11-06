@@ -89,3 +89,8 @@ This API should be integrated in your shopping cart and there are two simple ste
 - **Notes:**
 
   For any questions please send an email to hello@storydots.app
+
+
+## **Example code snippets:**
+
+* [RoR sample code](RoR.md)
