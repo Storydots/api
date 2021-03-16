@@ -58,6 +58,7 @@ def get_qr(tag_code)
     end_point = "#{@basic_end_point}/qr/#{tag_code}"
     uri = URI.parse("#{end_point}")
     request = Net::HTTP::Get.new(uri)
+    request["Accept"] = "image/png"
     req_options = {
       use_ssl: uri.scheme == "https",
       read_timeout: 7,
