@@ -6,7 +6,7 @@ In order to test, you will need to request a sandbox API Key needed to get Tag c
 
 This API should be integrated in your shopping cart and there are two simple steps you need to follow in order to do this:
 
-1. You should get a Tag code once the purchase _is confirmed_ (This is important since every time you get a Tag code, it will be deducted from your balance) and store the _videoUrl_ since you will need to present it to the user so that he can upload his video. (you can do it on screen, via email or both)
+1. You should get a Tag code once the purchase _is confirmed_ (This is important since every time you get a Tag code, it will be deducted from your balance) and store the _url_ since you will need to redirect the user there so that he can upload his video. (you can do it on screen, via email or both)
 2. You can use the Tag code to retrieve the QR Tag so that it can be printed and added to the gift's packaging.
 
 ## **Retrieving new Tag Codes**
@@ -32,7 +32,7 @@ This API should be integrated in your shopping cart and there are two simple ste
   This method will return a new, unique Tag code associated with your API key. This code identifies an active StoryDots tag. Each time you call this method you will get a new code so the overall code balance will be deducted. Please be careful in calling this method and make sure the returned code is saved for later use.
 
   - **Code:** 200 <br />
-    **Content:** `{ "statusCode": 200, "tagCode": "[NEW-TAG-CODE]" "videoUrl": "[ACTIVE-VIDEO-URL]" }`
+    **Content:** `{"tags":[{"tagCode":"[NEW-TAG-CODE]","url":"[REDIRECT-URL]"}]}`
 
 - **Error Response:**
 
