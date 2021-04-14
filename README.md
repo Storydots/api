@@ -165,7 +165,7 @@ The params should be sent as a JSON, see the sample call below. These are the pa
 
 ```
   curl --request POST \`_
-    --url 'https://api-stg.storydots.app/order'\
+    --url 'https://api.storydots.app/order'\
     --header 'Content-Type: application/json'\
     --header 'x-api-key: cVjBzEmfmU4fXhV8wmwaR9QVBPSpdpxu2bRcrz1w'\
     --data '{
