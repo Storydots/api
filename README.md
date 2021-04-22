@@ -39,7 +39,7 @@ This API should be integrated in your shopping cart. Keep in mind you will be in
 You will integrate with our API letting StoryDots know when there is a new order, and we will take care of sending a notification to the user so thay they can record their virtual greeting. You will just need to print the tag with the QR code and include it in the gift's package. This integration works as follows:
 
 1. When a new order is placed, you will send a request to the `/order` endpoint informing us of the new purchase. You should perform this request once the purchase _is confirmed_ (this is important since every time you get a Tag code, it will be deducted from your balance).
-2. The response will include the code and the URL to the tag image with the QR code for you to print (this is the [Retrieving QR Tag image](#retrieving-qr-tag-image) endpoint documented below). You will include the printed tag in the gift's package, and we will take care of sending an email to the user to let them know they can record their virtual greeting. 
+2. The response will include the code and the URL to the tag image with the QR code for you to print (this is the [/qr](#retrieving-qr-tag-image) endpoint documented below). You will include the printed tag in the gift's package, and we will take care of sending an email to the user to let them know they can record their virtual greeting. 
 
 ## Endpoints documentation
 
