@@ -39,7 +39,7 @@ This API should be integrated in your shopping cart. Keep in mind you will be in
 You will integrate with our API letting StoryDots know when there is a new order, and we will take care of sending a notification to the user so thay they can record their virtual greeting. You will just need to print the tag with the QR code and include it in the gift's package. This integration works as follows:
 
 1. When a new order is placed, you will send a request to the `/order` endpoint informing us of the new purchase. You should perform this request once the purchase _is confirmed_ (this is important since every time you get a Tag code, it will be deducted from your balance).
-2. The response will include the code and the URL to the tag image with the QR code for you to print. You will include the printed tag in the gift's package, and we will take care of sending an email to the user to let them know they can record their virtual greeting. 
+2. The response will include the code and the URL to the tag image with the QR code for you to print (this is the [Retrieving QR Tag image](#retrieving-qr-tag-image) endpoint documented below). You will include the printed tag in the gift's package, and we will take care of sending an email to the user to let them know they can record their virtual greeting. 
 
 ## Endpoints documentation
 
@@ -129,19 +129,19 @@ You will integrate with our API letting StoryDots know when there is a new order
 
 - **Method:**
 
-  `POST` - assigns a StoryDots code to your new purchase
+  `POST` - assigns a StoryDots order to your new purchase
 
 - **Request Headers**
 
-  **x-api-key:** your private API key that authorizes the request and creates a new order linked to a specific shop
+  **x-api-key:** _Your API Key_
   **Content-Type:** application/json
   
-- **Body params**
+- **Body**
 
 The params should be sent as a JSON, see the sample call below. These are the params the endpoint will expect:
   **buyerEmail**: the email address of the buyer to which we will send en email with the recording link
-  **buyerName**: the name of the buyer, helps us customize the experience
-  **orderId**: your internal ID of the order, we will store this ID in case we need to troubleshoot any issues
+  **buyerName**: the name of the buyer, which helps us customize the experience
+  **orderId**: your internal ID of the order, we will store this ID to allow you to trace the order if needed
   **(optional) buyerPhone** - we will implement SMS/WhatsApp notifications in the near future
   **(optional) orderDetails** - details about the order being created, which might include products bought, quantity, price, etc. This will enable us to create statistics about your gifts!
   **(optional) ordertotal** - total cost of the order, this will be useful to generate statistics about the gifts your consumers make
