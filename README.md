@@ -139,12 +139,13 @@ You will integrate with our API letting StoryDots know when there is a new order
 - **Body**
 
 The params should be sent as a JSON, see the sample call below. These are the params the endpoint will expect:
-  **buyerEmail**: the email address of the buyer to which we will send en email with the recording link
-  **buyerName**: the name of the buyer, which helps us customize the experience
-  **orderId**: your internal ID of the order, we will store this ID to allow you to trace the order if needed
-  **(optional) buyerPhone** - we will implement SMS/WhatsApp notifications in the near future
-  **(optional) orderDetails** - details about the order being created, which might include products bought, quantity, price, etc. This will enable us to create statistics about your gifts!
-  **(optional) ordertotal** - total cost of the order, this will be useful to generate statistics about the gifts your consumers make
+
+  - **buyerEmail**: the email address of the buyer to which we will send en email with the recording link
+  - **buyerName**: the name of the buyer, which helps us customize the experience
+  - **orderId**: your internal ID of the order, we will store this ID to allow you to trace the order if needed
+  - **(optional) buyerPhone** - we will implement SMS/WhatsApp notifications in the near future
+  - **(optional) orderDetails** - details about the order being created, which might include products bought, quantity, price, etc. This will enable us to create statistics about your gifts!
+  - **(optional) ordertotal** - total cost of the order, this will be useful to generate statistics about the gifts your consumers make
 
 - **Success Response:**
 
