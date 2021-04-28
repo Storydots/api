@@ -123,20 +123,20 @@ You will integrate with our API letting StoryDots know when there is a new order
 
 ### Placing a new order
 
-- **URL**
+#### URL
 
   _/order_
 
-- **Method:**
+#### Method
 
-  `POST` - assigns a StoryDots order to your new purchase
+  - `POST` - assigns a StoryDots order to your new purchase
 
-- **Request Headers**
+#### Request Headers
 
-  **x-api-key:** _Your API Key_
-  **Content-Type:** application/json
+  - **x-api-key:** _Your API Key_
+  - **Content-Type:** application/json
   
-- **Body**
+#### Body
 
 The params should be sent as a JSON, see the sample call below. These are the params the endpoint will expect:
 
@@ -147,14 +147,14 @@ The params should be sent as a JSON, see the sample call below. These are the pa
   - **(optional) orderDetails** - details about the order being created, which might include products bought, quantity, price, etc. This will enable us to create statistics about your gifts!
   - **(optional) ordertotal** - total cost of the order, this will be useful to generate statistics about the gifts your consumers make
 
-- **Success Response:**
+#### Success Response
 
   This method will return a code and a link to our API so that you can obtain the full tag image including the QR code, ready to print
 
   - **Code:** 200 OK
     **Content:** `{ "code": "[NEW-TAG-CODE]", "codeUrl": "https://api.storydots.app/qr/[NEW-TAG-CODE]" }`
 
-- **Error Responses:**
+#### Error Responses
 
   - **Code:** 403 Forbidden
     **Content:** `{ "message": "Missing Authentication Token" }`
