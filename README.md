@@ -172,7 +172,7 @@ The params should be sent as a JSON, see the sample call below. These are the pa
     --data '{
       "buyerEmail": "buyer@email.com",
       "buyerName": "Buyer Name",
-      "orderID": 2354654,
+      "orderId": 2354654,
       "orderDetails": "{\"id\": 2354654, \"items\": [{\"name\": \"Cool gift\", \"quantity\": 1, \"price\": 2234.75}, {\"name\": \"Another cool gift\", \"quantity\": 1, \"price\": 2000}] }",
       "orderTotal": 4234.75
     }'
