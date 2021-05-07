@@ -149,10 +149,17 @@ The params should be sent as a JSON, see the sample call below. These are the pa
 
 #### Success Response
 
-  This method will return a code and a link to our API so that you can obtain the full tag image including the QR code, ready to print
+  This method will return a code and links to different resources related to that code, as well as the remaining stock. These are:
+  - **code**: the code assigned to the new order.
+  - **tagUrl**: this URL points to the full tag image that includes the QR for this specific code.
+  - **codeUrl**: same as tagUrl - **_codeUrl is being removed in coming releases, as we've renamed it to tagUrl_**
+  - **qrUrl**: URL containing the image of the QR code for the sender. This is _only_ the QR code, and not the full tag.
+  - **storyUrl**: the link the receiver of the package will open to find the surprise greeting and reply. This is usually not needed as the receiver will enter the experience scanning the QR code.
+  - **remainingStock**: remaining stock for your StoryDots user.
 
+  Succesful response example:
   - **Code:** 200 OK
-    **Content:** `{ "code": "[NEW-TAG-CODE]", "codeUrl": "https://api.storydots.app/qr/[NEW-TAG-CODE]" }`
+  - **Content:** `{"code": "[NEW-TAG-CODE]", "tagUrl": "https://api.storydots.app/qr/[NEW-TAG-CODE]", "codeUrl": "https://api.storydots.app/qr/[NEW-TAG-CODE]", "qrUrl": "https://api.storydots.app/qrImage/[NEW-TAG-CODE]", "storyUrl": "https://storydots.app/story/[NEW-TAG-CODE]", "remainingStock": [remainingStock]}`
 
 #### Error Responses
 
